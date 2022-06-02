@@ -7,8 +7,8 @@
         <methods>
           <include name="afterSuite1Test"/>
           <include name="beforeClass1Test"/>
-          <include name="afterMethod1Test"/>
-          <include name="beforeMethod1Test"/>
+          <include name="afterMethodTest"/>
+          <include name="beforeMethodTest"/>
           <include name="orderAnHtmlBook"/>
           <include name="beforeSuite1Test"/>
           <include name="afterClass1Test"/>

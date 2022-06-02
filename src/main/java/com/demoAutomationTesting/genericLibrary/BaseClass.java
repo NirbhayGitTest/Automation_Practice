@@ -16,7 +16,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
+import com.demoAutomationTesting.webElementsRepo.AddToBasketPage;
+import com.demoAutomationTesting.webElementsRepo.BasketPage;
+import com.demoAutomationTesting.webElementsRepo.CheckoutPage;
 import com.demoAutomationTesting.webElementsRepo.HomePage;
+import com.demoAutomationTesting.webElementsRepo.Html5BookPage;
+import com.demoAutomationTesting.webElementsRepo.HtmlBookPage;
+import com.demoAutomationTesting.webElementsRepo.ProductSummaryPage;
 import com.demoAutomationTesting.webElementsRepo.ShopPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -38,6 +44,12 @@ public class BaseClass {
 	public int randomNumber;
 	
 	public ShopPage shopPage;
+	public HtmlBookPage htmlBookPage;
+	public Html5BookPage html5BookPage;
+	public AddToBasketPage addToBasketPage;
+	public BasketPage basketPage;
+	public ProductSummaryPage productSummaryPage;
+	public CheckoutPage checkoutPage;
 	
 	public HomePage home;
 	public Actions action;
@@ -133,6 +145,13 @@ public class BaseClass {
 		
 		home = new HomePage(driver);
 		shopPage = new ShopPage(driver);
+		htmlBookPage = new HtmlBookPage(driver);
+		html5BookPage = new Html5BookPage(driver);
+		addToBasketPage = new AddToBasketPage(driver);
+		basketPage = new BasketPage(driver);
+		productSummaryPage = new ProductSummaryPage(driver);
+		checkoutPage = new CheckoutPage(driver);
+		
 		
 		//navigate to the application
 		SeleniumWebDriverLibrary.navigateApp(url, driver);
